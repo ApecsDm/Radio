@@ -125,6 +125,32 @@ class RadioTest {
     }
 
     @Test
+    public void IncreaseVolume() {
+        Radio rad = new Radio();
+        rad.setCurrentVolume(6);
+
+        rad.increaseVolume();
+
+        int expected = 7;
+        int actual = rad.getCurrentVolume();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void DecreaseVolume() {
+        Radio rad = new Radio();
+        rad.setCurrentVolume(3);
+
+        rad.decreaseVolume();
+
+        int expected = 2;
+        int actual = rad.getCurrentVolume();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void IncreaseVolumeUnderMinValue() {
         Radio rad = new Radio();
         rad.setCurrentVolume(-1);
