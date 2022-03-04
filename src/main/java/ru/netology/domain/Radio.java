@@ -19,7 +19,7 @@ public class Radio {
         if (newCurrentStation < 0) {
             return;
         }
-        currentStation = newCurrentStation;
+        this.currentStation = newCurrentStation;
     }
 
     public void setCurrentVolume(int currentVolume) {
